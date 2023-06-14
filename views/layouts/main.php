@@ -9,6 +9,8 @@ use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
+use yii\helpers\Url;
+
 
 AppAsset::register($this);
 
@@ -59,14 +61,14 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#about">About Us</a></li>
-              <li class="scroll-to-section"><a href="#services">Mahasiswa</a></li>
+              <li class="scroll-to-section"><a href="<?= Yii::$app->urlManager->createUrl(['/site/index']) ?>">Home</a></li>
+              <li class="scroll-to-section"><a href="<?= Yii::$app->urlManager->createUrl(['/site/about']) ?>">About Us</a></li>
+              <li class="scroll-to-section"><a href="<?= Yii::$app->urlManager->createUrl(['/mahasiswa/index']) ?>">Mahasiswa</a></li>
               <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
               <li class="scroll-to-section"><a href="#blog">Blog</a></li> 
               <li class="scroll-to-section"><a href="#contact">Message Us</a></li> 
-              <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Contact Now</a></div></li> 
-            </ul>        
+              <li class="scroll-to-section"><div class="main-red-button"><a href="<?= Yii::$app->urlManager->createUrl(['/mahasiswa/contact']) ?>">Contact Now</a></div></li> 
+            </ul>
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
@@ -88,6 +90,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     </div>
 </main>
 
+<footer>
 <footer>
     <div class="container">
       <div class="row">
