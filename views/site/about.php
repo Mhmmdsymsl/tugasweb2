@@ -7,7 +7,7 @@ use yii\helpers\Html;
 $this->title = 'about';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-  <div>
+  <div class="about">
     <h1>ini about</h1>
   </div>
  <div id="about" class="about-us section">
